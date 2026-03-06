@@ -49,15 +49,30 @@
   <script>
     // Array de citações
     const quotes = [
-      "A vida é o que acontece enquanto você está ocupado fazendo outros planos. – John Lennon",
-      "A simplicidade é o último grau de sofisticação. – Leonardo da Vinci",
-      "O sucesso é a soma de pequenos esforços repetidos dia após dia. – Robert Collier",
-      "Acredite que você pode e você já está no meio do caminho. – Theodore Roosevelt",
-      "Não importa o quão devagar você vá, desde que você não pare. – Confúcio"
+       "A vida é o que acontece enquanto você está ocupado fazendo outros planos. – John Lennon",
+  "A simplicidade é o último grau de sofisticação. – Leonardo da Vinci",
+  "O sucesso é a soma de pequenos esforços repetidos dia após dia. – Robert Collier",
+  "Acredite que você pode e você já está no meio do caminho. – Theodore Roosevelt",
+  "Não importa o quão devagar você vá, desde que você não pare. – Confúcio",
+  "Ou corre com nóis, ou corre de nóis. - LAPA"
     ];
 
-       // 1ª Digitação (Resolva aqui o exercício)
+// Seleciona o parágrafo onde a citação será exibida
+const quoteText = document.getElementById("quote");
 
+// Seleciona o botão
+const button = document.getElementById("newQuoteButton");
+
+// Adiciona um evento de clique no botão
+button.addEventListener("click", function () {
+
+// Gera um índice aleatório baseado no tamanho do array
+const randomIndex = Math.floor(Math.random() * quotes.length);
+
+// Exibe a citação correspondente no parágrafo
+quoteText.textContent = quotes[randomIndex];
+
+});
 
   </script>
 </body>
